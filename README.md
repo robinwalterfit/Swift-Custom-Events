@@ -62,5 +62,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* If you want see some examples about the usage just visit the [wiki](https://github.com/robinwalterfit/Swift-Events/wiki)
+* If you want to see some examples about the usage just visit the [wiki](https://github.com/robinwalterfit/Swift-Events/wiki)
 * If you have any ideas for a better `quicksort algorithm` then check out [this gist](https://gist.github.com/robinwalterfit/60a42c388d35b66cba7cf7864bc0fb98) and let's discuss about the changes.
