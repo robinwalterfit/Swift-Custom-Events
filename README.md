@@ -1,5 +1,7 @@
-Swift Custom Events
+Swift Events
 ===================
+
+**This file still has to be updated**
 
 A very simple way to implement Backbone.js style custom event listeners and triggering in Swift for iOS development.
 
