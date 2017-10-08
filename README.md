@@ -15,7 +15,7 @@ To use Swift Events in your project make sure you are using at least the `Swift-
 
 Because Swift Events just depends on `Foundation` you can use it anywhere, on the server-side, macOS, iOS, watchOS, tvOS...
 
-### [Installing]
+### Installing
 
 With Swift PM (= Package Manager):
 
@@ -37,7 +37,7 @@ Run the tests in Xcode.
 
 ## Deployment
 
-Just follow the instructions of [[Installing|Installing]] and it should work.
+Just follow the instructions of [Installing](#installing) and it should work.
 
 ## Built With
 
