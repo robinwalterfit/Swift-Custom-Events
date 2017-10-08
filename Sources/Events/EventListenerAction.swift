@@ -7,7 +7,7 @@
 ///
 /// - Author: Robin Walter
 /// - License: MIT License
-/// - Version: 1.1.3
+/// - Version: 1.1.4
 /// - Note: Original code from Stephen Haney
 /// - SeeAlso: https://github.com/StephenHaney/Swift-Custom-Events
 ///

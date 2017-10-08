@@ -7,7 +7,7 @@
 ///
 /// - Author: Robin Walter
 /// - License: MIT License
-/// - Version: 1.1.3
+/// - Version: 1.1.4
 /// - Note: Original code from Stephen Haney
 /// - SeeAlso: https://github.com/StephenHaney/Swift-Custom-Events
 ///
@@ -17,9 +17,9 @@ import Foundation
 /**
  The EventManager manages the events
 
- - Version: 1.1.3
+ - Version: 1.1.4
  */
-class EventManager {
+public class EventManager {
 
     /**
      Stores the events in a `Dictonary` as `String` and the `func`s/closures in an Array
@@ -56,7 +56,7 @@ class EventManager {
      - Parameter action: The callback to perform.
      - Parameter priority: The priority of the callback.
      */
-    func addListener( tag: String, action: @escaping ( () -> () ), priority: UInt8 = 10 ) -> Int {
+    public func addListener( tag: String, action: @escaping ( () -> () ), priority: UInt8 = 10 ) -> Int {
 
         let callback = EventListenerAction( callback: action, priority )
         
@@ -84,7 +84,7 @@ class EventManager {
      - Parameter action: The callback to perform.
      - Parameter priority: The priority of the callback.
      */
-    func addListener( tag: String, action: @escaping ( ( Any? ) -> () ), priority: UInt8 = 10 ) -> Int {
+    public func addListener( tag: String, action: @escaping ( ( Any? ) -> () ), priority: UInt8 = 10 ) -> Int {
 
         let callback = EventListenerAction( callback: action, priority )
 
@@ -112,7 +112,7 @@ class EventManager {
      - Parameter action: The callback to perform.
      - Parameter priority: The priority of the callback.
      */
-    func addListener( tag: String, action: @escaping ( ( Any... ) -> () ), priority: UInt8 = 10 ) -> Int {
+    public func addListener( tag: String, action: @escaping ( ( Any... ) -> () ), priority: UInt8 = 10 ) -> Int {
 
         let callback = EventListenerAction( callback: action, priority )
 
@@ -140,7 +140,7 @@ class EventManager {
      - Parameter tag: The event name.
      - Parameter index: Optional. The index of the listener to remove. Default `nil`.
      */
-    func removeListener( tag: String, index: Int? = nil ) {
+    public func removeListener( tag: String, index: Int? = nil ) {
 
         if index != nil {
 
@@ -160,7 +160,7 @@ class EventManager {
 
      - Since: 1.0.0
      */
-    func clearManager() {
+    public func clearManager() {
 
         self.listeners.removeAll()
 
@@ -174,7 +174,7 @@ class EventManager {
      - Parameter tag: The event name.
      - Parameter param: Optional. The parameter given to the callbacks.
      */
-    func trigger( tag: String, param: Any? ) {
+    public func trigger( tag: String, param: Any? ) {
 
         if self.done.index( of: tag ) == nil {
             
@@ -220,7 +220,7 @@ class EventManager {
      - Parameter tag: The event name.
      - Parameter params: The parameters given to the callbacks.
      */
-    func trigger( tag: String, params: Any... ) {
+    public func trigger( tag: String, params: Any... ) {
 
         if self.done.index( of: tag ) == nil {
             
@@ -260,7 +260,7 @@ class EventManager {
      
      - Parameter tag: The event name.
      */
-    func isDone( tag: String ) -> Bool {
+    public func isDone( tag: String ) -> Bool {
         
         if self.done.index( of: tag ) != nil {
             
@@ -283,7 +283,7 @@ class EventManager {
 
      - Parameter listeners: The listeners of the event to sort.
      */
-    func sort( listeners: inout NSMutableArray ) {
+    internal func sort( listeners: inout NSMutableArray ) {
 
         if listeners.count > 1 {
 
