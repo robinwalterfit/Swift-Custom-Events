@@ -22,7 +22,7 @@ With Swift PM (= Package Manager):
 Add the following to the dependencies of your `Package.swift`
 
 ```swift
-.package( url: "https://github.com/robinwalterfit/Swift-Events.git", .upToNextMajor( from: "1.1.3" ) )
+.package( url: "https://github.com/robinwalterfit/Swift-Events.git", .upToNextMajor( from: "1.1.4" ) )
 ```
 
 Then in your code place at the top of the files where you need Swift Events:
