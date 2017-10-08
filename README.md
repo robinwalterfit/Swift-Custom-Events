@@ -11,7 +11,7 @@ The easiest way to get started with Swift Events is to use Swift PM.
 
 ### Prerequisites
 
-To use Swift Events in your project make sure you are using at least the Swift-4.0-REALEASE-toolchain.
+To use Swift Events in your project make sure you are using at least the `Swift-4.0-REALEASE-toolchain`.
 
 Because Swift Events just depends on `Foundation` you can use it anywhere, on the server-side, macOS, iOS, watchOS, tvOS...
 
