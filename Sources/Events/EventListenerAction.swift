@@ -7,7 +7,7 @@
 ///
 /// - Author: Robin Walter
 /// - License: MIT License
-/// - Version: 1.0.0
+/// - Version: 1.1.3
 /// - Note: Original code from Stephen Haney
 /// - SeeAlso: https://github.com/StephenHaney/Swift-Custom-Events
 ///
@@ -57,7 +57,7 @@ class EventListenerAction {
         - Parameter callback: The action to call
         - Parameter priority: The priority of the callback
     */
-    init( action: @escaping ( () -> () ), _ priority: UInt8 ) {
+    init( callback: @escaping ( () -> () ), _ priority: UInt8 ) {
 
         self.action                   = callback
         self.actionWithParam          = nil
@@ -75,7 +75,7 @@ class EventListenerAction {
         - Parameter callback: The action to call
         - Parameter priority: The priority of the callback
     */
-    init( action: @escaping ( ( Any? ) -> () ), _ priority: UInt8 ) {
+    init( callback: @escaping ( ( Any? ) -> () ), _ priority: UInt8 ) {
 
         self.action                   = nil
         self.actionWithParam          = callback
@@ -93,11 +93,11 @@ class EventListenerAction {
         - Parameter callback: The action to call
         - Parameter priority: The priority of the callback
     */
-    init( action: @escaping ( ( Any... ) -> () ), _ priority: UInt8 ) {
+    init( callback: @escaping ( ( Any... ) -> () ), _ priority: UInt8 ) {
 
         self.action                   = nil
         self.actionWithParam          = nil
-        self.actionWithMultipleParams = action
+        self.actionWithMultipleParams = callback
 
         self.priority = priority
 
